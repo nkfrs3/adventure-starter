@@ -1,3 +1,5 @@
+const { items } = require("../data/world-data");
+
 class Room {
 
     constructor(name, description) {
@@ -46,6 +48,12 @@ class Room {
     getItemByName(name) {
 
         // Fill this in
+        for (let i = 0; i < this.items.length; i++) {
+            let item = this.items[i]
+            if (item.name === name) {
+                return this.items.splice(i, 1) [0]
+            }
+        }
     }
 
 }

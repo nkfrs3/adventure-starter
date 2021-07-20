@@ -34,12 +34,23 @@ class Player {
     takeItem(itemName) {
 
         // Fill this in
-
+        for (let i = 0; i < this.currentRoom.items.length; i++) {
+            let currentItem = this.currentRoom.items[i]
+            if (currentItem.name === itemName) {
+                this.items.push(this.currentRoom.items.splice(i, 1) [0])
+            }
+        }
     }
 
     dropItem(itemName) {
 
         // Fill this in
+        for (let i = 0; i < this.items.length; i++) {
+            let currentItem = this.items[i]
+            if (currentItem.name === itemName) {
+                this.currentRoom.items.push(this.items.splice(i, 1) [0])
+            }
+        }
     }
 
     eatItem(itemName) {
@@ -50,6 +61,12 @@ class Player {
     getItemByName(name) {
 
         // Fill this in
+        for (let i = 0; i < this.items.length; i++) {
+            let item = this.items[i]
+            if (item.name === name) {
+                return this.items.splice(i, 1) [0]
+            }
+        }
     }
 }
 
