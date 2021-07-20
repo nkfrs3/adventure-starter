@@ -1,3 +1,6 @@
+// const { Food } = require('./food');
+// const worldData = require('../data/world-data');
+
 class Player {
 
     constructor(name, startingRoom) {
@@ -55,6 +58,14 @@ class Player {
 
     eatItem(itemName) {
         // Fill this in
+        // console.log("worldData " + worldData.items.name)
+        for (let i = 0; i < this.items.length; i++) {
+            let currentItem = this.items[i]
+            if (currentItem.name === itemName && currentItem.isFood) {
+                //return this.items.splice(i, 1)
+                return this.items.splice(i, 1) [0]
+            }
+        }
 
     }
 

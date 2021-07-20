@@ -5,8 +5,9 @@ const { Item } = require("./item");
 
 class Food extends Item{
 
-  constructor(name, description) {
+  constructor(name, description, isFood = true) {
     super(name, description)
+    this.isFood = isFood
   }
 
 }
