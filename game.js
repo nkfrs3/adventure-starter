@@ -1,3 +1,5 @@
+//test comment
+
 const readline = require('readline');
 
 const { Player } = require('./class/player');
